@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f9;
+    font-family:'poppins', sans-serif;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+header {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #d3f1ff;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #102b69;
+    margin-bottom: 0.5rem;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 8px rgba(0, 128, 255, 0.6);
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #08426e;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: #100761;
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: #08426e;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 1.2rem;
+}
+
+nav {
+    background-color: #17698c;
+    padding: 0.5rem 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #d9e9ff;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    background-color: #e0e0e0;
+    padding: 1rem;
+    text-align: center;
+}
+
+.container {
+    display: block;
+    gap: 10px;
+    padding: 1rem;
+}
+
+
+.grid-keahlian {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.grid-keahlian article {
+    margin-top: 0.5rem;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-left: 4px solid #636e72;
+    border-radius: 6px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.grid-keahlian article:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+main {
+    padding: 0px;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+article {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-left: 4px solid #636e72;
+}
+
+aside {
+    background-color: #dfe6e9;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 1);
+}
+
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 0.5rem;
+}
+
+aside a .fa-instagram {
+    color: #e1306c;
+    font-size: 1rem;
+}
+
+aside a .fa-tiktok {
+    color: #000;
+    font-size: 1rem;
+}
+
+.highlight-text {
+    color: #d63031;
+    font-weight: bold;
+}
+
+.tombol-utama {
+    background-color: #00cec9;
+    color: white;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tombol-utama:hover {
+    background-color: #019191;
+    transform: scale(1.05);
+}
+
+.dark-mode {
+    background-color: #222;
+    color: #f4f4f9;
+}
+
+.dark-mode header,
+.dark-mode nav,
+.dark-mode footer,
+.dark-mode section,
+.dark-mode aside {
+    background-color: #333;
+    color: #f4f4f9;
+}
+
+.dark-mode h1 {
+    color: #c5f4ff;
+}
+
+.dark-mode h2 {
+    color: #c5f4ff;
+}
+
+.dark-mode #tentang p {
+    color: #f4f4f9;
+}
+
+.dark-mode #keahlian article p {
+    color: #174e94
+}
+
+.dark-mode aside h4 {
+    color: #c5f4ff;
+}
+
+.dark-mode aside a[href*="instagram.com"] {
+    color: #ff6fa9;
+}
+
+.dark-mode aside a[href*="tiktok.com"] {
+    color: #66d9ef; /* biru muda khas TikTok */
+}
+
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    body {
+        font-size: 1.1rem;
+    }
+
+    .grid-keahlian {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: clamp(1rem, 1vw + 0.5rem, 1.2rem);
+    }
+
+    .container {
+        grid-template-columns: 3fr 1fr;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .grid-keahlian {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}
