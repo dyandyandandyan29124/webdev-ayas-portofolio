@@ -8,7 +8,7 @@
 
 ## 📁 Struktur Folder
     - index.html    → Struktur utama halaman
-    - style.css     → Styling tampilan
+    - style.css     → Styling tampilan web
     - script.js     → Interaktivitas
     - README.md     → Dokumentasi proyek
 
